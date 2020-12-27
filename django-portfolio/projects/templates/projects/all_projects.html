@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,9 @@
 </head>
 <body>
     <h1>hello again!</h1>
-    {{ projects }}
     {% for project in projects %}
+        <img src="{% static 'projects/img/testproject.png' %}" alt="screenshot of project">
+        <p>{{ project.image }}</p>
         <h1>{{ project.title }}</h1>
         <p>{{ project.description }}</p>
         <p>{{ project.technology }}</p>
