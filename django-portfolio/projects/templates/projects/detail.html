@@ -1,15 +1,10 @@
-{% load static%}
+{% extends 'projects/base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+
+{% block content %}
     <img src="{% static project.image %}" alt="{{ project.description }}">
     <h1>{{ project.title }}</h1>
     <p>{{ project.description }}</p>
     <p>{{ project.technology }}</p>
-</body>
-</html>
+{% endblock %}
